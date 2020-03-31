@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class Demoelevator1Application implements CommandLineRunner {
     @Autowired
-    private ElevatorService elevatorService;
+    private SimpleElevatorService simpleElevatorService;
 
 
     public static void main(String[] args) {
@@ -21,6 +21,7 @@ public class Demoelevator1Application implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        elevatorService.start();
+        //elevatorService.start();
+        simpleElevatorService.run();
     }
 }
